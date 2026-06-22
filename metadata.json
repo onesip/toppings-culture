@@ -1,0 +1,6 @@
+{
+  "name": "OneSip Toppings & Tea Culture",
+  "description": "A cultural bridge for Dutch customers: Chinese tea, Asian dessert textures, tropical fruit, and modern milk tea.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
