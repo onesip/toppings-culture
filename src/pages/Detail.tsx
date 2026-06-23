@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { toppings } from "../data";
-import { ArrowLeft, Share2 } from "lucide-react";
+import { ArrowLeft, Share2, Check } from "lucide-react";
 
 export default function Detail() {
   const { id } = useParams();
   const topping = toppings.find(t => t.id === id);
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   if (!topping) {
     return <Navigate to="/" replace />;
@@ -31,9 +39,9 @@ export default function Detail() {
         </motion.div>
 
         <div className="absolute top-12 right-12 hidden md:flex items-center gap-3">
-          <span className="text-[9px] uppercase tracking-widest opacity-40 font-bold">Share this flavor</span>
-          <div className="w-8 h-8 border border-[#1A1A1A]/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors" onClick={() => navigator.clipboard.writeText(window.location.href)}>
-            <Share2 size={12} className="opacity-70" />
+          <span className="text-[9px] uppercase tracking-widest opacity-40 font-bold">{copied ? 'Link Copied!' : 'Share this flavor'}</span>
+          <div className="w-8 h-8 border border-[#1A1A1A]/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors" onClick={handleShare}>
+            {copied ? <Check size={12} className="opacity-70 text-emerald-600" /> : <Share2 size={12} className="opacity-70" />}
           </div>
         </div>
 
