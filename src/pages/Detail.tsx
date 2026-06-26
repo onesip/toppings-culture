@@ -68,15 +68,12 @@ export default function Detail() {
              ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-24 mb-16">
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-24 mb-16">
             <div>
               <p className="text-xl md:text-2xl leading-relaxed text-[#1A1A1A] mb-8 font-serif italic">
                 "{topping.heroLineEn}"
               </p>
-              <p className="text-base leading-relaxed text-[#1A1A1A]/80 mb-6 border-l-2 border-[#A1824A] pl-6 font-medium">
-                {topping.shortDescEn}
-              </p>
-              <p className="text-sm leading-relaxed text-[#1A1A1A]/60 mb-6">
+              <p className="text-sm leading-relaxed text-[#1A1A1A]/60 mb-6 whitespace-pre-wrap">
                 {topping.storyEn}
               </p>
             </div>
@@ -84,28 +81,8 @@ export default function Detail() {
             <div className="space-y-8">
                <div className="bg-white/50 border border-[#1A1A1A]/10 p-6 md:p-8">
                   <span className="text-[10px] uppercase tracking-widest text-[#A1824A] font-bold block mb-4">中文解读 (Story)</span>
-                  <p className="text-sm leading-relaxed text-[#1A1A1A]/70 mb-6">
+                  <p className="text-sm leading-relaxed text-[#1A1A1A]/70 mb-6 whitespace-pre-wrap">
                     {topping.storyCn}
-                  </p>
-                  
-                  <div className="w-full h-px bg-[#1A1A1A]/10 my-6"></div>
-                  
-                  <span className="text-[10px] uppercase tracking-widest text-[#A1824A] font-bold block mb-4">Why Customers Love It</span>
-                  <p className="text-sm leading-relaxed text-[#1A1A1A]/80 mb-2">
-                    {topping.whyLoveEn}
-                  </p>
-                  <p className="text-xs leading-relaxed text-[#1A1A1A]/50">
-                    {topping.whyLoveCn}
-                  </p>
-                  
-                  <div className="w-full h-px bg-[#1A1A1A]/10 my-6"></div>
-                  
-                  <span className="text-[10px] uppercase tracking-widest text-[#A1824A] font-bold block mb-4">Best With</span>
-                  <p className="text-sm leading-relaxed text-[#1A1A1A]/80 mb-2">
-                    {topping.bestWithEn}
-                  </p>
-                  <p className="text-xs leading-relaxed text-[#1A1A1A]/50">
-                    {topping.bestWithCn}
                   </p>
                </div>
             </div>
