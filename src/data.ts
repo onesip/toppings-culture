@@ -145,8 +145,8 @@ export const toppings: Topping[] = [
   {
     "id": "brown-sugar-tapioca-pearls",
     "number": "07",
-    "nameEn": "Classic Bubble Milk Tea",
-    "nameCn": "经典珍珠奶茶",
+    "nameEn": "Brown Sugar Tapioca Pearls",
+    "nameCn": "黑糖珍珠",
     "tags": [
       "Iconic",
       "Chewy",
